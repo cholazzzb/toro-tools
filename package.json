@@ -1,0 +1,45 @@
+{
+  "name": "toro-tools",
+  "version": "1.0.17",
+  "description": "Collection of tools",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "keywords": [],
+  "author": "nicholas biantoro",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "setup": "bin.js",
+    "toto": "index.js"
+  },
+  "scripts": {
+    "toto": "node dist/index.js",
+    "build": "tsc -b",
+    "lint": "eslint . --max-warnings 0 --ext ts --ext ts",
+    "format": "prettier --write **/*.ts",
+    "type-check": "tsc --pretty --noEmit"
+  },
+  "lint-staged": {
+    "*.@(ts|tsx)": [
+      "pnpm lint",
+      "pnpm format"
+    ]
+  },
+  "dependencies": {
+    "cosmiconfig": "^8.2.0",
+    "fs-extra": "^11.1.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
+    "@types/node": "^20.4.5",
+    "@typescript-eslint/eslint-plugin": "^6.2.0",
+    "@typescript-eslint/parser": "^6.2.0",
+    "eslint": "^8.45.0",
+    "eslint-config-prettier": "^8.8.0",
+    "lint-staged": "^13.2.3",
+    "prettier": "^3.0.0",
+    "typescript": "^5.1.6"
+  }
+}

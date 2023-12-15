@@ -1,0 +1,9 @@
+# Generated for test
+.toro-toolsrc
+src/__generated__/assets
+public/assets/svg
+
+#
+dist
+node_modules
+tsconfig.tsbuildinfo
